@@ -79,7 +79,7 @@ def main():
     sender_balance = w3.eth.get_balance(sender_address)
     print(f"发送地址余额: {w3.from_wei(sender_balance, 'ether')} ETH")
 
-    receivers = read_receivers('/Users/just1love/address.csv')
+    receivers = read_receivers('address.txt')
     total_amount_needed = w3.to_wei(TRANSFER_AMOUNT, 'ether') * len(receivers)
     print(f"总共需要发送: {w3.from_wei(total_amount_needed, 'ether')} ETH")
 
